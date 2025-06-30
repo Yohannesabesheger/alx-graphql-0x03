@@ -4,15 +4,15 @@ import { ApolloProvider } from "@apollo/client";
 import client from "@/graphql/apolloClient";
 import ErrorBoundary from "@/components/ErrorBoundary";
 
-export  function App({ Component, pageProps }: AppProps) {
-  return (
-    <ApolloProvider client={client}>
-      <Component {...pageProps} />
-    </ApolloProvider>
-  );
-}
+// export  function App({ Component, pageProps }: AppProps) {
+//   return (
+//     <ApolloProvider client={client}>
+//       <Component {...pageProps} />
+//     </ApolloProvider>
+//   );
+// }
 
-function MyApp({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <ErrorBoundary>
       <Component {...pageProps} />
@@ -20,4 +20,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;
+export default App;
